@@ -4,6 +4,6 @@
 
 hydra.overrideAttrs (oldAttrs: {
   prePatch = ''
-    sed -i -e 's/getGCRootsDir.*$/& "--show-trace",/' src/script/hydra-eval-jobset
+    sed -i -e 's/getGCRootsDir,/& "--show-trace",/' src/script/hydra-eval-jobset
   '';
 })
